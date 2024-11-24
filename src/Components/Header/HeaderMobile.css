@@ -1,0 +1,45 @@
+@media screen and (max-width:1441px) {
+  .header-wrapper{
+    display: none;
+  }
+
+  .header-mobile{
+    display: block !important;
+    background: linear-gradient(45deg, black, #72e2ae3b, black);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+   .container{
+    >div{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0 !important;
+    }
+   }
+  }
+}
+
+.mobile-menu-btn,.mobile-menu-btn button {
+background: transparent;
+width: 28px !important;
+border: unset;
+position: relative;
+}
+
+
+
+
+.mobile-menu-btn span {
+  height: 3px;
+  width: 100%;
+  background: #fff !important;
+  display: block;
+  color: #fff;
+}
+
+.mobile-menu-btn span:first-child{
+  margin-bottom: .5rem !important;
+}

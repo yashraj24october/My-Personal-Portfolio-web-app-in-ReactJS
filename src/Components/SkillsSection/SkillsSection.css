@@ -1,0 +1,30 @@
+.skills-section-wrapper{
+  background: rgb(15 23 42);
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+height: max-content;
+position: relative;
+z-index: 2;
+}
+
+
+@media screen and (max-width:426px) {
+.subSkill{
+  gap:1.2rem !important;
+  h5{
+line-height: 1.6;
+  }
+}
+}
+
+
+@media screen and (max-width:768px) {
+
+}
+@media screen and (max-width:1025px) and (min-width:768px){
+
+}
+@media screen and (max-width:1024px) {
+
+}

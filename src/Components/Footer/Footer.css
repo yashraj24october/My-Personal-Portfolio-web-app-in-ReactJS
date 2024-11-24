@@ -1,0 +1,18 @@
+footer{
+border-top: 1px solid #72e2ae54;
+border-bottom: 1px solid #72e2ae54;
+padding: 1rem 0 !important;
+.container{
+display: flex;
+justify-content: space-between;
+}
+p{color: #BEBFCB;}
+.social-links-wrapper {
+  justify-content: start;
+  width: max-content;
+  .navIcon {
+    height: 2rem;
+    width: 2rem;
+}
+}
+}

@@ -1,0 +1,54 @@
+.social-links-wrapper{
+  display: flex !important;
+  /* border: 1px solid red; */
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.navIcon{
+  position: relative;
+  z-index: 2;
+  color:skyblue;
+  height:3rem;
+  width:3rem;
+  box-shadow: 2px 2px 4px grey,-1px -1px 4px grey;
+  border-radius: 50%;
+  /* border:2px solid white; */
+  }
+  .navIcon:hover{
+  color:greenyellow}
+
+
+
+  .icon_wrapper{
+    position: relative;
+    .cover{
+      position: absolute;
+      height: 0%;
+      width:100%;
+      top: 0;
+      background:var(--primary-color);
+      transition: .5s all ease;
+    
+    }
+  }
+
+  .icon_wrapper:hover .cover{
+    height: 100%;
+    
+  }
+
+  .icon_wrapper:hover .navIcon{
+    fill: black;
+    stroke: #fff;
+  }
+
+  @media screen and (max-width:426px) {
+    .navIcon{
+      height:2rem !important;
+      width: 2rem !important;
+    }
+  }
+
+

@@ -1,0 +1,15 @@
+.timeline-tree h4 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 2.2rem !important;
+  span{
+    position: relative;
+    top:3px;
+    margin-right: .6rem;
+    .text-primary{
+      color:var(--primary-color) !important;
+    }
+  }
+}
+

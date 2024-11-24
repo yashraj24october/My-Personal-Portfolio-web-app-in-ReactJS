@@ -1,0 +1,71 @@
+
+
+    /* Skill label */
+    .skill-label {
+      margin-top: 10px;
+      color: white;
+      font-size: 16px;
+    }
+
+.skillCircle {
+      height: 12rem;
+      width: 12rem;
+      stroke-width: 3 !important;
+  }
+
+  .skill_box{
+padding: 1.3rem !important;
+padding-top: 2.5rem !important;
+background:#162033;
+border-radius: .8rem;
+position: relative;
+border:1px solid rgb(255 255 255 / 10%);
+transition: .5s all ease-in;
+  }
+  .skill_box >div:first-child{
+    position: relative;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 2rem;
+  }
+.skill_box:hover{
+transform: translateY(-6px);
+}
+  .skill_label{
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .skill_percentage {
+    color: #BFBECB;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+
+@media screen and (max-width:426px) {
+  .skillCircle {
+    height: 8rem !important;
+    width: 8rem !important;
+    /* stroke-width: 3 !important; */
+}
+.skill_percentage{
+  top: 36% !important;
+}
+}
+
+
+@media screen and (max-width:768px) {
+
+}
+@media screen and (max-width:1025px) and (min-width:768px){
+
+}
+@media screen and (max-width:1024px) {
+
+}

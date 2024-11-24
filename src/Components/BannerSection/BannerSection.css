@@ -1,0 +1,113 @@
+.intro-animated-text-wrapper{
+  display: grid;
+  place-content: center;
+  /* height: 80vh; */
+  h3{
+    color: #fff;
+    font-size: 46px;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+.hero-image-wrapper{
+  display: grid;
+  place-content: center;
+}
+.banner_section{
+  display: grid;
+  place-content: center;
+  /* height: 80vh; */
+  transition: all .5s ease-in;
+}
+.hide{
+  transform: translateY(-145%);
+}
+
+.image-container {
+    position: relative;
+    height: 175px;
+    width: 175px;
+    padding: 7px !important;
+    margin-bottom:2.8rem !important;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%; /* Makes the image circular */
+    }
+}
+
+
+
+.rotating-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Circular shape */
+  
+}
+
+.rotating-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: linear-gradient(to right, #72E2AE, #72e2ae5a); /* Gradient border effect */
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0); /* Mask to create the border effect */
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; /* Mask behavior */
+  mask-composite: exclude;
+  padding: 7px; /* Width of the rotating border */
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .loading-animation {
+  display: grid;
+  place-content: center;
+  img {
+    margin:3rem 0 3.5rem 0 !important;
+   
+    border-radius: 50%;
+}
+} */
+
+
+.profession{
+  color: var(--primary-color);
+}
+
+p.short-intro {
+  font-size: 20px;
+  padding: 2rem 0 !important;
+}
+
+
+@media screen and (max-width:426px){
+  .banner_section{
+    padding: 8rem 0 !important;
+  }
+}
+
+@media screen and (min-width:426px){
+  .banner_section{
+    padding: 12rem 0 !important;
+  }
+}

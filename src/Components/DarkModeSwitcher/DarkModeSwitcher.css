@@ -1,0 +1,29 @@
+.dark-mode-button {
+  border-radius: 16px;
+    display: flex;
+    height: 32px;
+    line-height: 32px;
+    position: relative;
+    width: 64px;
+    background: transparent;
+    border: 1px solid skyblue;
+    padding: 3px 5px !important;
+}
+button.dark-mode-button::before {
+  content: " ";
+  height: 100%;
+  width: 3rem;
+  display: block;
+  background: url(../../assets/dark-mode-icon.png) no-repeat;
+  border-radius: 29%;
+  transition: .2s all ease-in-out;
+  border-radius: 50%;
+  background-size: contain;
+ 
+}
+button.dark-mode-button.light::before {
+  transform: translateX(98%);
+  background: url(../../assets/light-mode-icon.png) no-repeat;
+  background-size: contain;
+
+}

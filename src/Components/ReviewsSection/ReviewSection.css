@@ -1,0 +1,10 @@
+.review-section-wrapper{
+  height: max-content;
+  min-height: 100vh;
+  background: rgb(15 23 42);
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+

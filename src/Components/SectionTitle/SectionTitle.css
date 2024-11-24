@@ -1,0 +1,79 @@
+.section-title-wrapper {
+  width: max-content;
+  margin: auto;
+  position: relative;
+  z-index:1;
+}
+
+.section_title{
+  color: #fff !important;
+  font-weight: 600;
+ letter-spacing: 1px;
+ font-size: 36px;
+ text-transform:uppercase;
+ position: relative;
+ display: inline-block;
+}
+
+.section_title::before {
+  content: " ";
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  background: url(/src/assets/star.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 22px;
+  top: 2px;
+}
+
+.underline {
+  position: relative;
+  height: .5rem;
+  width: 68%;
+  background: rgb(80 81 84 / 39%);
+  margin-bottom: 5.6rem !important;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  margin-top: 2rem !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.underline::before {
+  content: " ";
+  height: 100%;
+  display: block;
+  background: var(--primary-color);
+  width: 6px;
+  animation-name: underline-animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: absolute;
+  right: 0;
+  border-radius:50%;
+}
+
+@keyframes underline-animation {
+  to{
+    right: 0;
+  }
+  from{
+    right: 100%;
+  }
+}
+
+@media screen and (max-width:426px) {
+
+  .section_title{
+    font-size: 30px !important;
+  }
+  .section_title::before{
+height: 30px !important;
+width: 30px !important;
+  }
+  .underline{
+    margin-bottom: 4rem !important;
+  }
+}

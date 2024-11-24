@@ -1,0 +1,5 @@
+@media screen and (max-width:426px) {
+  .about-section-wrapper .container{
+    flex-wrap: wrap;
+  }
+}

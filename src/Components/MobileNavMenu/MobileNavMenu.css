@@ -1,0 +1,88 @@
+ .mobile-nav-menu{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem !important;
+  top: 0;
+  left: 0;
+  background: var(--primary-color2);
+  color: #fff;
+  z-index: 100;
+  transform: translateY(-100%);  
+  transition: transform .5s ease-in-out;
+}
+.mobile-nav-menu.open{
+  transform: translateY(0);  
+}
+
+:is(.mobile-nav-menu, .desktop-menu)  :is(a:hover, li:hover){
+  /* background: var(--primary-color); */
+  text-decoration: none !important;
+}
+
+
+
+
+.menu-header > .container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3rem !important;
+  &::before, &::after{
+    content: unset !important;
+  }
+
+}
+.close-btn-wrapper{
+  height: 36px;
+  width: 36px;
+  position: relative;
+}
+
+input.close-btn-checkbox{
+  height: 100%;
+  width: 100%;
+}
+.close-btn {
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  font-size: 24px;
+  height: 36px;
+  line-height: 36px;
+  transition: border-color .15s ease-in-out;
+  width: 36px;
+  display: grid;
+  place-content: center;
+
+}
+.close-btn:hover{
+  background: var(--primary-color);
+}
+nav:has(.mobile-menu){
+  max-width: max-content;
+ 
+}
+.mobile-menu{
+  width: max-content;
+}
+.mobile-nav-menu a{
+  display: block;
+  /* width:max-content !important; */
+  text-align: center;
+  font-family: Canela Deck Web;
+  font-size: 35px;
+  letter-spacing: -.1px;
+  line-height: 1.7;
+ color: #fff;
+}
+@media screen and (max-width:426px) {
+  :root{
+    font-size: 16px;
+  }
+  /* .mobile-nav-menu.open{
+    transform: translateY(0);  
+  } */
+}
+
+

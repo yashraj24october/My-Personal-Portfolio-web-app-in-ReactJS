@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap');
+body, html, #root {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+:root {
+  font-family: "Radio Canada", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  --primary-color:#72E2AE;
+  --primary-color2:rgb(15,23,42);
+  --primary-color3:slateblue;
+  --secondary-color:#0bbe6b;
+}
+html{
+  scroll-padding-top: 100px;
+}
+*,div{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+
+}
+
+body {
+  margin: 0;
+  max-width: 100vw;
+  
+  min-height: 100vh;
+  /* background-color: rgb(15 23 42 / 1); */
+  background: url(.././src/assets/bg-portfolio.png) repeat;
+  /* rotate: -180deg; */
+  font-family: Roobert,sans-serif;
+  background-attachment: fixed;
+}
+body:has(.visible), body:has(.about-visible){
+overflow-x: hidden;
+}
+section.bottom-section{
+  background: var(--primary-color);
+  background: var(--primary-color);
+  transform: translateY(100%);
+  
+  transition-property: transform, padding-top;
+  transition-duration: 1.6s;
+  transition-timing-function: ease-in-out;
+}
+section.bottom-section.fixed{
+  width: 97%;
+  border-radius: 2rem;
+  border: 1px solid rgb(255 255 255 / 23%);
+  transform: rotateX(0deg);
+  position: fixed;
+  top: 14.5%;
+  left: 1.4%;
+transform: translateY(0);
+
+  padding-top: 2rem !important;
+ 
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Prevent the entire section from scrolling */
+  z-index: 1000; /* Ensures it stays on top */
+
+  .contact-section-wrapper{
+    background: linear-gradient(45deg, rgb(8 25 65),#2d0808dc,rgb(8 25 65));
+    border-radius: 2rem;
+    max-height: 100%; /* Ensures it doesn't overflow its container */
+    overflow-y: auto; /* Makes the content scrollable */
+    padding-bottom: 14rem !important;
+    >.container{
+      margin-top: 6rem !important;
+    }
+    .contact-card{
+      background: #00000073;
+      border: 1px solid rgb(255 255 255 / 23%);
+    }
+    form{
+      border: 1px solid rgb(255 255 255 / 23%);
+      background: #00000073;;
+      padding: 4rem !important;
+      input, textarea {
+        background: rgb(15 23 42 / 32%);
+        border: 1px solid rgb(255 255 255 / 23%);
+        /* box-shadow: 1px -1px 7px -4px var(--primary-color) inset, -1px -1px 3px -3px var(--primary-color) inset; */
+    }
+    input[type='submit']{
+      background: var(--primary-color);
+    }
+    }
+    &::-webkit-scrollbar{
+      width: 3px !important;
+    }
+/* 
+    &.sectionPadding{
+      padding-top: 7rem !important;
+    } */
+
+    .grid-bg h2{
+      /* top: 5rem !important; */
+      color: rgb(144 140 140 / 12%) !important
+    }
+  }
+}
+
+ul{
+  list-style: none;
+  margin-bottom: 0;
+}
+p{
+  margin: 0;
+}
+
+@media screen and (max-width:767px) {
+  .contact-section-wrapper.sectionPadding{
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+}
+
+
+
+@media screen and (min-width:1200px) {
+  .container {
+    max-width: 1440px !important;
+    width: 1340px !important;
+  }
+}
+

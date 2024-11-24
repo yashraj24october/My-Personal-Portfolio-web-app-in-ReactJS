@@ -1,0 +1,14 @@
+.desktop-menu li:after{
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0%;
+  background-color: var(--primary-color);
+  transition: width .5s ease-in-out;
+  position: relative;
+  bottom: -3px;
+}
+
+.desktop-menu li:hover:after{
+  width: 100%;
+}

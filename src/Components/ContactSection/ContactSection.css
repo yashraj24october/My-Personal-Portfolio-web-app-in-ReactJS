@@ -1,0 +1,39 @@
+.contact-section-wrapper{
+  height: max-content;
+  min-height: 100vh;
+  background: rgb(15 23 42);
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  .contact-info{
+    >p{
+      color: #BEBFCB;
+      line-height: 27px;
+      font-size: 16px;
+      margin-bottom: 12px !important;
+      &::after{
+        content: " ";
+    background: #72e2ae36;
+    height: 5px;
+    width: 10rem;
+    display: block;
+    margin: 3rem 0 !important;
+    border-radius: .5rem;
+      }
+    }
+.contact-info-heading{
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 12px !important;
+  font-weight: 600;
+}
+  }
+}
+
+
+@media screen and (max-width:767px) {
+  footer{
+    margin-top: 1rem !important;
+  }
+}
