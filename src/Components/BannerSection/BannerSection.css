@@ -19,6 +19,12 @@
   place-content: center;
   /* height: 80vh; */
   transition: all .5s ease-in;
+  .connect-links h4 {
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2rem !important;
+}
+
 }
 .hide{
   transform: translateY(-145%);

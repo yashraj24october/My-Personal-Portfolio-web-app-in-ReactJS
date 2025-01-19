@@ -1,0 +1,35 @@
+.nav-btn{
+  position: fixed;
+  bottom:1.3rem;
+  right: 1.3rem;
+  z-index: 100;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  span {
+    
+      padding: 1rem;
+      /* border-radius: 50% !important; */
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      
+    &::before{
+      content: " ";
+      height: 1.5rem;
+      width: 1.5rem;
+      background: url(/src/assets/goDownBtn.png) center/contain no-repeat;
+      display: block;
+    }
+}
+span.go-t {
+&::before{
+  rotate: 180deg;
+}
+}
+}

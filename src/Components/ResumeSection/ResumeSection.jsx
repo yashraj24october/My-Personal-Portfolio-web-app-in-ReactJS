@@ -3,7 +3,10 @@ import './ResumeSection.css'
 import TimelineTree from '../TimelineTree/TimelineTree'
 import SectionTitle from '../SectionTitle/SectionTitle'
 import FlexContainer from '../FlexContainer/FlexContainer';
+import { useInView } from 'react-intersection-observer'
+// import { useEffect } from 'react'
 const ResumeSection = () => {
+
   let education =[
     {
       session: 'Mar 2016 - Mar 2017',
@@ -30,7 +33,7 @@ let workResponsiblity = `
 <ul>
 <li>Designed and implemented visually appealing, responsive UIs that align with modern design principles and enhance user interaction.</li>
 <li>Consistently developed high-quality custom drupal themes, ensuring seamless functionality and engaging user experiences.</li>
-<li>Solved complex project challenges by developing tailored solutions through custom Drupal modules and Javascript, improving overall site performance.</li>
+<li>Solved complex project challenges by developing tailored solutions through custom Drupal modules and Javascript, improving overall site performance and user experience.</li>
 <li>Created comprehensive project documentation to streamline workflows, enhance team collaboration, and ensure future project scalability and maintenance.</li>
 <li>Maintained a strong track record of completing project tasks on schedule, with a focus on quality and effective teamwork to meet project goals efficiently.</li></ul>
 `;
@@ -44,7 +47,7 @@ workResponsiblity: workResponsiblity
   return (
     <div id='resume'  className='resume-section-wrapper sectionPadding'>
        <div className='grid-bg'>
-<h2>RESUME</h2>
+<h2 data-aos = 'fade-zoom-in'>RESUME</h2>
   <div></div>
   <div></div>
   <div></div>

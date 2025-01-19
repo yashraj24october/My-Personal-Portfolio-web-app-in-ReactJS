@@ -3,8 +3,27 @@ import './SkillsSection.css'
 import SkillStatisticBox from '../SkillStatisticBox/SkillStatisticBox'
 import FlexContainer from '../FlexContainer/FlexContainer'
 import SectionTitle from '../SectionTitle/SectionTitle'
-const SkillsSection = () => {
+import reactLogo from '../../assets/reactLogo.png';
+import htmlLogo from '../../assets/htmlLogo.png';
+import cssLogo from '../../assets/cssLogo.png';
+import jsLogo from '../../assets/jsLogo.png';
+import phpLogo from '../../assets/phpLogo.png';
+import drupalLogo from '../../assets/drupalLogo.png';
+import jqueryLogo from '../../assets/jqueryLogo.png';
+import mysqlLogo from '../../assets/mysqlLogo.png';
+import tailwindLogo from '../../assets/tailwindLogo.png';
+import bootstrapLogo from '../../assets/bootLogo.png';
+import OOPLogo from '../../assets/oopLogo.png';
+import GitLogo from '../../assets/gitLogo.png';
+import cppLogo from '../../assets/cppLogo.png';
+import javaLogo from '../../assets/javaLogo.png';
+import pythonLogo from '../../assets/pythonLogo.png';
+import restLogo from '../../assets/apiLogo.png';
+import typescriptLogo from '../../assets/typescriptLogo.png';
+import { useInView } from 'react-intersection-observer'
 
+const SkillsSection = () => {
+  
   let mySkills = [
     {
      skillName: 'Front-End Development',
@@ -13,26 +32,37 @@ const SkillsSection = () => {
         {
           skill: 'React.Js',
           percentage: 85,
+          icon: reactLogo
         },
         {
           skill: 'HTML5 & CSS3',
           percentage: 90,
+          icon: htmlLogo
         },
         {
           skill: 'Javascript (ES6+)',
           percentage: 90,
+          icon: jsLogo
         },
         {
           skill: 'JQuery',
           percentage: 80,
+          icon: jqueryLogo
+        },
+        {
+          skill: 'Typescript',
+          percentage: 85,
+          icon: typescriptLogo
         },
         {
           skill: 'Bootstrap',
           percentage: 75,
+          icon: bootstrapLogo
         },
         {
           skill: 'Tailwind CSS',
           percentage: 85,
+          icon: tailwindLogo
         },
       ]
     },
@@ -43,9 +73,11 @@ const SkillsSection = () => {
          {
            skill: 'PHP',
            percentage: 85,
+           icon: phpLogo
          },
          {
            skill: 'Drupal',
+           icon: drupalLogo,
            subSkill: [
             {
               skill: 'Site Building',
@@ -78,6 +110,7 @@ const SkillsSection = () => {
              {
                skill: 'MySQL',
                percentage: 90,
+               icon: mysqlLogo
              }
            ]
          },
@@ -88,14 +121,22 @@ const SkillsSection = () => {
              {
                skill: 'C++',
                percentage: 80,
+               icon: cppLogo
              },
              {
               skill: 'Javascript',
               percentage: 90,
+              icon: jsLogo
             },
             {
               skill: 'Python',
               percentage: 75,
+              icon: pythonLogo
+            },
+            {
+              skill: 'Java',
+              percentage: 80,
+              icon: javaLogo
             }
            ]
          },
@@ -105,14 +146,17 @@ const SkillsSection = () => {
              {
                skill: 'OOPs',
                percentage: 90,
+               icon: OOPLogo
              },
              {
               skill: 'REST API Integration',
               percentage: 90,
+             icon: restLogo
             },
             {
               skill: 'Git/Github',
               percentage: 80,
+              icon: GitLogo
             },
            ]
          },
@@ -144,7 +188,7 @@ const SkillsSection = () => {
     
     <section id='skills' className='skills-section-wrapper sectionPadding'>
        <div className='grid-bg'>
-<h2>SKILLS</h2>
+<h2 data-aos = 'fade-zoom-in'>SKILLS</h2>
   <div></div>
   <div></div>
   <div></div>

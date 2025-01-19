@@ -1,4 +1,4 @@
-.desktop-menu li:after{
+.desktop-menu li a:after{
   content: '';
   display: block;
   height: 2px;
@@ -9,6 +9,6 @@
   bottom: -3px;
 }
 
-.desktop-menu li:hover:after{
+.desktop-menu li:hover a:after{
   width: 100%;
 }

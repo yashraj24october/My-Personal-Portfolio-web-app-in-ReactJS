@@ -5,7 +5,8 @@ body, html, #root {
   position: relative;
 }
 :root {
-  font-family: "Radio Canada", sans-serif;
+  /* font-family: "Radio Canada", sans-serif; */
+  font-family: Roboto;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -16,7 +17,7 @@ body, html, #root {
   --primary-color:#72E2AE;
   --primary-color2:rgb(15,23,42);
   --primary-color3:slateblue;
-  --secondary-color:#0bbe6b;
+  --secondary-color:#6a5acd2e;
 }
 html{
   scroll-padding-top: 100px;
@@ -44,7 +45,7 @@ body {
 body:has(.visible), body:has(.about-visible){
 overflow-x: hidden;
 }
-section.bottom-section{
+/* section.bottom-section{
   background: var(--primary-color);
   background: var(--primary-color);
   transform: translateY(100%);
@@ -52,7 +53,7 @@ section.bottom-section{
   transition-property: transform, padding-top;
   transition-duration: 1.6s;
   transition-timing-function: ease-in-out;
-}
+} */
 section.bottom-section.fixed{
   width: 97%;
   border-radius: 2rem;
@@ -107,6 +108,10 @@ transform: translateY(0);
       /* top: 5rem !important; */
       color: rgb(144 140 140 / 12%) !important
     }
+  }
+
+  .info > div:last-child{
+    border-left:6px solid #6a5acd2e !important;
   }
 }
 

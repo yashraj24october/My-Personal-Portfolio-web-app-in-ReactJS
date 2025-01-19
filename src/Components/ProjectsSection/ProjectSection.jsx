@@ -1,13 +1,17 @@
-import React, { useReducer, useRef } from 'react'
+import React, { useReducer, useRef, useState } from 'react'
 import './ProjectsSection.css'
 import SectionTitle from '../SectionTitle/SectionTitle'
 import FlexContainer from '../FlexContainer/FlexContainer';
 import ProjectPoster from '../ProjectPoster/ProjectPoster';
 import musicPlayerProject from '../../assets/music-player.png'
 import divinGitaGyanProject from '../../assets/divin-gita-gyan.png'
-import { Fade } from 'react-reveal';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react'
 
 const ProjectSection = () => {
+  
+  let loadBtnRef = useRef(null);
+  let [projectCount,setProjectCount] = useState(3);
   let reducer = (state,action)=>{
 if(action == 'all'){
   state = 'all'
@@ -128,6 +132,25 @@ let allProjects = [
     description:``
   }
 ];
+function loadProjects(){
+  if(projectCount <= allProjects.length){
+    setProjectCount(projectCount+3)
+    
+    if(projectCount == allProjects.length-3){
+      loadBtnRef.current.innerText = 'Load less';
+    }
+  }
+  if(loadBtnRef.current.innerText == 'LOAD LESS'){
+    setProjectCount(projectCount-3);
+    if(projectCount==6){
+      loadBtnRef.current.innerText = 'Load More';
+      setProjectCount(3);
+    }
+  }
+ 
+    
+  
+}
 
 let simpleProjects = allProjects.filter((project)=>{
   return project.technologyName == 'HTML + CSS + JS'
@@ -151,9 +174,9 @@ let workProjects = allProjects.filter((project)=>{
 
 
   return (
-    <div id='projects' className='projects-section-wrapper sectionPadding'>
+    <div id='projects'  className='projects-section-wrapper sectionPadding'>
        <div className='grid-bg'>
-<h2>PROJECTS</h2>
+<h2 data-aos = 'fade-zoom-in'>PROJECTS</h2>
   <div></div>
   <div></div>
   <div></div>
@@ -178,26 +201,35 @@ let workProjects = allProjects.filter((project)=>{
 <FlexContainer totalItem={9} type='projects'>
 {
 (projectCategory == 'all') ? allProjects.map((item,index)=>{
-  return <Fade bottom><ProjectPoster key={index} img={item.img} title={item.title} technologyName={item.technologyName} category={item.category} liveLink={item.liveLink} GithubLink={item.GithubLink} /></Fade>
+  if(index < projectCount) 
+  return  <ProjectPoster key={index} img={item.img} title={item.title} technologyName={item.technologyName} category={item.category} liveLink={item.liveLink} GithubLink={item.GithubLink} /> 
 })
 : (projectCategory == 'simple') ? simpleProjects.map((item,index)=>{
-  return <Fade bottom><ProjectPoster key={index} img={item.img} title={item.title} technologyName={item.technologyName} category={item.category} liveLink={item.liveLink} GithubLink={item.GithubLink} /></Fade>
+  if(index < projectCount) 
+  return  <ProjectPoster key={index} img={item.img} title={item.title} technologyName={item.technologyName} category={item.category} liveLink={item.liveLink} GithubLink={item.GithubLink} /> 
 })
 : (projectCategory == 'react') ? reactProjects.map((item,index)=>{
-  return <Fade bottom><ProjectPoster key={index} img={item.img} title={item.title} technologyName={item.technologyName} category={item.category} liveLink={item.liveLink} GithubLink={item.GithubLink} /></Fade>
+  if(index < projectCount) 
+  return  <ProjectPoster key={index} img={item.img} title={item.title} technologyName={item.technologyName} category={item.category} liveLink={item.liveLink} GithubLink={item.GithubLink} /> 
 })
 :(projectCategory == 'next') ? nextProjects.map((item,index)=>{
-  return <Fade bottom><ProjectPoster key={index} img={item.img} title={item.title} technologyName={item.technologyName} category={item.category} liveLink={item.liveLink} GithubLink={item.GithubLink} /></Fade>
+  if(index < projectCount) 
+  return  <ProjectPoster key={index} img={item.img} title={item.title} technologyName={item.technologyName} category={item.category} liveLink={item.liveLink} GithubLink={item.GithubLink} /> 
 })
 :(projectCategory == 'drupal') ? drupalProjects.map((item,index)=>{
-  return <Fade bottom><ProjectPoster key={index} img={item.img} title={item.title} technologyName={item.technologyName} category={item.category} liveLink={item.liveLink} GithubLink={item.GithubLink} /></Fade>
+  if(index < projectCount) 
+  return  <ProjectPoster key={index} img={item.img} title={item.title} technologyName={item.technologyName} category={item.category} liveLink={item.liveLink} GithubLink={item.GithubLink} /> 
 })
 :(projectCategory == 'work') ? workProjects.map((item,index)=>{
-  return <Fade bottom><ProjectPoster key={index} img={item.img} title={item.title} technologyName={item.technologyName} category={item.category} liveLink={item.liveLink} GithubLink={item.GithubLink} /></Fade>
+  if(index < projectCount) 
+  return  <ProjectPoster key={index} img={item.img} title={item.title} technologyName={item.technologyName} category={item.category} liveLink={item.liveLink} GithubLink={item.GithubLink} /> 
 })
 :<h5 className='text-center' style={{color:'#fff', fontWeight:'600'}}>To be added soon...</h5>
 }
 </FlexContainer>
+<div className='text-center load_more_btn_wrapper'>
+<button className='btn-hover' data-aos = 'flip-up' onClick={loadProjects} ref={loadBtnRef}><span>Load more</span></button>
+</div>
 </section>
     </div>
     

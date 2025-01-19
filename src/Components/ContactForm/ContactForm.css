@@ -5,7 +5,7 @@ form{
   background: rgb(22 32 51/1);
   border-radius: .5rem;
   label{
-    margin-bottom: 1rem !important;
+    margin-bottom: .6rem !important;
   }
   input,textarea{
     width: 100%;

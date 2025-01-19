@@ -3,13 +3,21 @@ import img from '../../assets/my-photo.jpg'
 import './AboutSection.css'
 import './AboutSectionMobile.css'
 import SectionTitle from '../SectionTitle/SectionTitle'
-import { Fade } from 'react-reveal'
+import { useInView } from 'react-intersection-observer'
+import { all } from 'axios'
+
 const AboutSection = () => {
   const aboutBodyRef = useRef(0);
   const viewFullBtnRef = useRef(0);
   let aboutRef = useRef(0)
   let [imageIsVisible,setImageIsVisible] = useState(false);
   let imageRef = useRef(0);
+  
+
+
+
+
+
 
 
 
@@ -30,7 +38,7 @@ const showFullText=()=>{
   return (
     <section id='about' className='about-section-wrapper sectionPadding'>
        <div className='grid-bg'>
-<h2>ABOUT</h2>
+<h2 data-aos = 'fade-zoom-in'>ABOUT</h2>
   <div></div>
   <div></div>
   <div></div>
@@ -39,14 +47,14 @@ const showFullText=()=>{
 </div>
 <SectionTitle title='ABOUT ME'/>
          <div className='container'>
-          <div ref={imageRef} className="image">
+          <div data-aos = {(innerWidth > 767) ? 'fade-right' : ''} className="image">
           <span className='box1'></span>
           <span className='box2'></span>
           <span className='box3'></span>
           <span className='box4'></span>
-          <img src={img} loading='lazy'/>
+          <img src={img} loading='lazy' alt='my-img'/>
           </div>
-          <Fade right><div className="about-text">
+          <div data-aos = {(innerWidth > 767) ? 'fade-left' : ''} className="about-text">
             <p ref={aboutBodyRef} className='line-clamp-8'>
             Hi, I'm <span>Yash Raj</span>, a passionate and versatile Full Stack Web Developer with a strong foundation in building high-quality, dynamic, secure, fully-featured and user-friendly web applications. With expertise in technologies like React.js, PHP, MySQL, and Drupal, I bring creativity and precision to every project I undertake. My proficiency extends to multiple programming languages, including C, C++, Java, JavaScript, and Python, making me a well-rounded developer who thrives on solving complex challenges.
 <br/><br/>
@@ -59,7 +67,7 @@ Let’s collaborate to create something extraordinary for your business. Reach o
 
             </p>
             <button className='viewToggle btn-hover' ref={viewFullBtnRef} onClick={showFullText}><span>View Full : )</span></button>
-          </div></Fade>
+          </div>
          </div>
     </section>
   )

@@ -9,7 +9,7 @@ import DarkModeSwitcher from '../DarkModeSwitcher/DarkModeSwitcher';
 import { Link } from 'react-router-dom';
 import MainNavMenu from '../MainNavMenu/MainNavMenu';
 import Logo from '../Logo/Logo';
-const Header = () => {
+const Header = ({setMode}) => {
 const headerRef = useRef(0);
 
 useEffect(()=>{
@@ -92,7 +92,7 @@ useEffect(()=>{
   <div className="col-md-7 main-menu">
       <MainNavMenu className='desktop-menu d-flex'/>
     </div>
-    <div className="col-md-2 right-menu"><button className='contact-btn btn-hover'><span>Hire Me</span></button><DarkModeSwitcher/></div>
+    <div className="col-md-2 right-menu"><button className='contact-btn btn-hover' data-aos = 'flip-up'><span>Hire Me</span></button><DarkModeSwitcher setMode={setMode}/></div>
   </div>
   </div>
 </div>

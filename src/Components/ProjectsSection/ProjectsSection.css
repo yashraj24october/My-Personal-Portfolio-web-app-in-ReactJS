@@ -7,7 +7,16 @@
   position: relative;
   z-index: 2;
 }
-
+.load_more_btn_wrapper{
+  padding: 3rem 0 !important;
+  button{
+    background-color: var(--primary-color);
+    padding: 10px 20px !important;
+    border: none;
+    border-radius: .5rem;
+    text-transform: uppercase;
+  }
+}
 nav.project-category-links{
   position: relative;
   z-index: 2;

@@ -180,7 +180,7 @@ a{
   transition: all .6s ease;
   background: linear-gradient(45deg, black, #72e2ae3b, black);
   box-shadow: 2px 2px 4px #00000059;
-  border-radius: 1.5rem;
+  border-radius: 16px;
   border: 1px solid #ffffff3d;
 }
 .header-wrapper .row{
@@ -190,6 +190,7 @@ a{
 .main-menu ul {
   display: flex !important;
   counter-reset: main-menu;
+  gap:2rem;
 }
 
 
@@ -200,14 +201,22 @@ a{
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  padding: 0 1.6rem !important;
+  padding-left: .2rem !important;
  
 }
 
 .main-menu ul li::before {
   counter-increment: main-menu;
-  content: counters(main-menu,".") ". ";
+  content: "0"counters(main-menu,".") ". ";
   color: var(--primary-color);
+}
+body:has(.banner_section.active) .main-menu ul li:nth-child(1) a, 
+body:has(.about-section-wrapper.active) .main-menu ul li:nth-child(2) a, 
+body:has(.resume-section-wrapper.active) .main-menu ul li:nth-child(3) a,
+body:has(.projects-section-wrapper.active) .main-menu ul li:nth-child(4) a,
+body:has(.contact-section-wrapper.active) .main-menu ul li:nth-child(5) a{
+  font-weight: 700;
+  color:var(--primary-color) !important;
 }
 
 .contact-btn {

@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import ProjectDetail from './Components/ProjectDetailPage/ProjectDetail';
 const App = () => {
+  
   const cursorRef = useRef(0);
   useEffect(()=>{
 window.addEventListener("mousemove",(e)=>{

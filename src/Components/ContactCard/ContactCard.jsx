@@ -3,7 +3,7 @@ import './ContactCard.css'
 
 const ContactCard = ({icon,label,data}) => {
   return (
-    <div className='contact-card'>
+    <div className='contact-card' data-aos = 'fade-up'>
       <div className='icon' dangerouslySetInnerHTML={{__html:icon}}/>
       <div>
           <div className='title'><p>{label}</p></div>

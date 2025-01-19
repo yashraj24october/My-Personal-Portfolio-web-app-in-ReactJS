@@ -1,0 +1,25 @@
+/* @media screen and (min-width:480px) { */
+.skillContainer{
+display:flex;
+justify-content: center;
+align-items:center;
+width:100%;
+flex-wrap: wrap;
+/* border:2px solid white; */
+column-gap: 2.2rem;
+row-gap: 1rem;
+padding:1rem 30%;
+
+}
+
+.header{
+font-family:Georgia, 'Times New Roman', Times, serif;
+display:inline-block;
+padding:10px;
+border-top:3px solid yellow;
+border-bottom:3px solid yellow;
+color:white;
+text-align:center;
+font-size:2rem;
+margin-top:1rem;
+}

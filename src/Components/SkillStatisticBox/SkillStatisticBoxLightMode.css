@@ -1,0 +1,56 @@
+
+
+   body.light-mode{
+   /* Skill label */
+    .skill_label {
+      color: var(--primary-color3) !important;
+      /* color:#000000; */
+    }
+
+    .techSkillStatistic_box{
+      .skill_label {
+        color: #000000 !important;
+      }
+    }
+.dynamic-text-shadow{
+  text-shadow: unset !important;
+}
+
+  .skill_percentage {
+    color: #000000;
+}
+.tech-skills{
+  background: #6a5acd2e;
+  border: 1px solid rgba(0, 191, 255, 0.377);
+}
+.subSkill{
+  background: linear-gradient(45deg, skyblue, transparent);
+  border: 1px solid rgba(0, 191, 255, 0.377);
+  h2.skill_label{
+font-weight: 600;
+  }
+}
+   }
+
+
+@media screen and (max-width:426px) {
+  .skillCircle {
+    height: 8rem !important;
+    width: 8rem !important;
+    /* stroke-width: 3 !important; */
+}
+.skill_percentage{
+  top: 36% !important;
+}
+}
+
+
+@media screen and (max-width:768px) {
+
+}
+@media screen and (max-width:1025px) and (min-width:768px){
+
+}
+@media screen and (max-width:1024px) {
+
+}

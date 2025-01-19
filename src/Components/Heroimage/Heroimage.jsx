@@ -6,7 +6,7 @@ const Heroimage = () => {
     <div className="hero-image-wrapper">
     <div className='image-container'>
     <Fade>
-    <img  src={myImgSrc} />
+    <img  src={myImgSrc} loading="lazy" alt='my-img'/>
     </Fade>
      <div className="rotating-border"></div>
      </div>

@@ -1,17 +1,19 @@
 import React from 'react'
 import { HashLink } from 'react-router-hash-link'
+
 import './MainNavMenu.css'
 
 const MainNavMenu = ({closeMenuCallback,className}) => {
+
   return (
     <nav>
         <ul className={className}>
-        <HashLink to='#'><li onClick={()=>{closeMenuCallback()}}>Home</li></HashLink>
-        <HashLink to='#about'><li onClick={()=>{closeMenuCallback()}}>About</li></HashLink>
-        <HashLink to='#skills'><li onClick={()=>{closeMenuCallback()}}>Skills</li></HashLink>
-        <HashLink to='#projects'><li onClick={()=>{closeMenuCallback()}}>Projects</li></HashLink>
-        <HashLink to='#reviews'><li onClick={()=>{closeMenuCallback()}}>Reviews</li></HashLink>
-        <HashLink to='#Contact'><li onClick={()=>{closeMenuCallback()}}>Contact</li></HashLink>
+        <li className='home-link' onClick={()=>{closeMenuCallback()}} data-aos = 'fade-left'><HashLink to='#'>Home</HashLink></li>
+        <li className='about-link' onClick={()=>{closeMenuCallback()}} data-aos = 'fade-left'><HashLink to='#about'>About</HashLink></li>
+        <li className='resume-link' onClick={()=>{closeMenuCallback()}} data-aos = 'fade-left'><HashLink to='#resume'>Resume</HashLink></li>
+        {/* <HashLink to='#skills'><li className='skills-link' onClick={()=>{closeMenuCallback()}} data-aos = 'fade-left'>Skills</li></HashLink> */}
+        <li className='projects-link' onClick={()=>{closeMenuCallback()}} data-aos = 'fade-left'><HashLink to='#projects'>Projects</HashLink></li>
+        <li className='contact-link' onClick={()=>{closeMenuCallback()}} data-aos = 'fade-left'><HashLink to='#Contact'>Contact</HashLink></li>
       </ul>
     </nav>
   )

@@ -10,6 +10,18 @@ border-radius: .8rem;
 position: relative;
 border:1px solid rgb(255 255 255 / 10%);
 }
+.icon-with-progressbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  img{
+    height: 3rem;
+    width: 3rem;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+  }
+}
 .subSkill > div{
   width: 100%;
 }

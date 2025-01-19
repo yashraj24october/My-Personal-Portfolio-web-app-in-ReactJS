@@ -1,15 +1,44 @@
 .dark-mode-button {
-  border-radius: 16px;
+  border-radius: 50%;
     display: flex;
     height: 32px;
     line-height: 32px;
     position: relative;
-    width: 64px;
+    width: 32px;
     background: transparent;
-    border: 1px solid skyblue;
+    /* border: 1px solid skyblue; */
+    border: none;
     padding: 3px 5px !important;
+    background: url(../../assets/light-mode-icon.png) no-repeat;
+    background-size: contain;
+    animation-name: rotate;
+    animation-duration: 1s;
+    transition: all .7s ease-in-out;
 }
-button.dark-mode-button::before {
+.dark-mode-button:hover{
+  rotate:360deg;
+}
+
+
+
+.dark-mode-button.light{
+  background: url(../../assets/dark-mode-icon.png) no-repeat;
+  background-size: contain;
+  border: none;
+  animation-name: rotate;
+  animation-duration: 1s;
+}
+@keyframes rotate {
+  from{
+rotate: 0deg;
+opacity: 0;
+  }
+  to{
+    rotate:360deg;
+    opacity: 1;
+  }
+}
+/* button.dark-mode-button::before {
   content: " ";
   height: 100%;
   width: 3rem;
@@ -25,5 +54,4 @@ button.dark-mode-button.light::before {
   transform: translateX(98%);
   background: url(../../assets/light-mode-icon.png) no-repeat;
   background-size: contain;
-
-}
+} */

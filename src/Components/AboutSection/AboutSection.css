@@ -12,12 +12,7 @@
 
   }
 
-  .image.visible{
-    animation-name: slideFromLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-  }
+
   .image{
     position: relative;
     height: max-content;
@@ -32,8 +27,6 @@ background: linear-gradient(45deg,transparent,var(--primary-color));
 animation: move1 1s linear infinite;
 border-top-right-radius: 40%;
 border-bottom-right-radius: 40%;
-animation-delay: 0s;
-
 }
 .box2{
   position:absolute;
